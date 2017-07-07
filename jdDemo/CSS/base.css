@@ -1,0 +1,314 @@
+/*设置统一样式*/
+*{
+	margin: 0;
+	padding: 0;
+	/*去除高亮效果*/
+	-webkit-tap-highlight-color:transparent;
+	/*设置元素的宽高计算方式*/
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+}
+/*这是统一字体，颜色，大小*/
+body{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #333;
+	background-color: rgb(238,243,250);
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration:none;
+}
+/*重置input样式*/
+input{
+	border: none;
+	/*去掉选中状态的高亮效果*/
+	outline: none;
+	/*清除默认的表单样式*/
+	-webkit-appearance:none;
+}
+ul,ol{
+	list-style: none;
+}
+/*头部*/
+.jd_container{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin:0 auto;
+	padding-top: 44px;
+	background-color: rgb(252,244,253);
+}
+.jd_container>.jd_header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 44px;
+}
+.jd_container>.jd_header>.jd_header_box{
+	height: 100%;
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	display:flex;
+	align-items:center;
+	/*rgba可以设置颜色的透明度*/
+	background-color: rgb(199,21,33);
+}
+/*logo设置*/
+.jd_container>.jd_header>.jd_header_box>.icon_logo{
+	width: 65px;
+	height: 25px;
+	background-image:url(../images/logo.jpg);
+	background-size: 65px 25px;
+	margin: 0 5px;
+}
+/*form表单*/
+.jd_header_box>form{
+	flex:1;
+	position: relative;
+}
+.jd_header_box>form>.icon_search{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background-image: url(../images/search.png);
+	background-size: 20px 20px;
+	left: 5px;
+	top: 5px;
+
+}
+/*input样式设置*/
+.jd_header_box>form>input{
+	width: 100%;
+	height: 30px;
+	border-radius: 15px;
+	padding-left: 30px;
+}
+/*登录*/
+.jd_header_box>.jd_login{
+	color: white;
+	margin-left: 8px;
+	margin-right: 8px;
+	background-color: rgb(199,21,33);
+	border:none;
+	text-decoration: none;
+}
+/*.jd_header_box>.jd_login{
+	background-color: rgb(199,21,33);
+	color: white;
+}*/
+/*模态框*/
+/*#modal1{
+	margin-top: 200px;
+}*/
+/*轮播图*/
+.jd_Carousel_figure{
+	width: 100%;
+	overflow: hidden;
+}
+/*轮播图ul*/
+.jd_Carousel_figure>.image_box{
+	width: 1000%;
+	overflow: hidden;
+	transform: translateX(-10%);
+}
+/*轮播图li*/
+.jd_Carousel_figure>.image_box>li{
+	width: 10%;
+	float: left;
+}
+/*轮播图超链接和img*/
+.jd_Carousel_figure>.image_box>li>a,.image_box>li>a>img{
+	width: 100%;
+	display: block;
+}
+
+/*圆点*/
+.jd_Carousel_figure>.jd_current{
+	width: 160px;
+	height: 10px;
+	position: absolute;
+	bottom: 5px;
+	left: 50%; 
+	margin-left:-80px;
+	overflow: hidden;
+	z-index: 2000;
+}
+.jd_Carousel_figure>.jd_current>li{
+	width: 10px;
+	height: 10px;
+	border:2px solid white;
+	border-radius: 5px;
+	margin:0 5px;
+	float: left;
+}
+/*获取第一个li；nth-child(1)表示第一个li的子元素*/
+.jd_Carousel_figure>.jd_current>li:nth-child(1){
+	margin-left: 0;
+}
+.jd_Carousel_figure>.jd_current>li.jd_Selected{
+	background-color: white;
+}
+/*分类查询*/
+.jd_classification{
+	width: 100%;
+	/*height: 250px;*/
+	background-color: rgb(255,255,255);
+	border-bottom: 2px solid #e0e0e0;
+}
+.jd_classification>.jd_col{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+.jd_classification>.jd_col>li>a img{
+	width: 70%;
+	/*height: 80px;*/
+	background-size: 50px 50px;
+}
+.jd_classification>.jd_col>li>a{
+	color: black;
+}
+.jd_classification>.jd_col>li{
+	margin: 5px;
+	text-align: center;
+}
+/*掌上秒杀*/
+.jd_primary_coverage{
+	padding: 0 5px;
+}
+.jd_primary_coverage>.jd_Seckill_box{
+	width: 100%;
+	background-color: white;
+	margin-top: 10px;
+	box-shadow: 0 0 1px #e0e0e0;
+}
+.jd_primary_coverage>.jd_Seckill_box>.jd_Seckill_box_title{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0 5px;
+	margin-top: 5px;
+}
+.jd_primary_coverage>.jd_Seckill_box>.jd_Seckill_box_title_no_border{
+	border-bottom: none;
+}
+.title_left{
+	float: left;
+}
+.title_right{
+	float: right;
+	cursor: pointer;
+}
+.title_left>.icon_clock{
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	background-image: url(../images/clock.png);
+	background-size: 20px 20px;
+	float: left;
+}
+.title_text{
+	color: rgba(199,21,33,1);
+	font-size: 15px;
+	margin-left: 10px;
+	float: left;
+}
+.jd_primary_coverage>.jd_Seckill_box>.jd_Seckill_box_title>.title_left>.title_time{
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+.title_time>span{
+	float: left;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	background-color: #333;
+	color: white;
+	margin-left: 5px;
+}
+.title_time>.jd_bling{
+	background-color: white;
+	width: 5px;
+}
+.title_time>.jd_colon{
+	
+	background-color: white;
+	color: #333;
+}
+/*降价商品*/
+.jd_Seckill_box_con>ul{
+	width: 100%;
+	overflow: hidden;
+}
+.jd_Seckill_box_con>ul>li{
+	float: left;
+	width: 33.33%;
+}
+.jd_Seckill_box_con>ul>li>a{
+	display: block;
+	width: 100%;
+	border-right: 1px solid #c0c0c0;
+}
+.jd_Seckill_box_con>ul>li>a>img{
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+
+}
+.jd_Seckill_box_con>ul>li:last-child>a{
+	border-right: none;
+}
+.jd_Seckill_box_con>ul>li>p{
+	color: rgba(199,21,33,1);
+	text-align: center;
+	margin-top: 10px;
+}
+.jd_Seckill_box_con>ul>li>p:last-child{
+	color: #666;
+	text-align: center;
+	text-decoration: line-through;
+}
+/*京东超市板块*/
+.jd_Seckill_box>.jd_Seckill_box_title{
+	font-size: 15px;
+}
+/*通用样式*/
+.w_50{
+	width: 50%;
+	display: block;
+}
+.w_50>img{
+	width: 100%;
+	display: black;
+}
+.f_left{
+	float: left;
+}
+.f_right{
+	float: right;
+}
+.b_left{
+	border-left: 1px solid #e0e0e0;
+}
+.b_right{
+	border-right: 1px solid #e0e0e0;
+}
+.b_bottom{
+	border-bottom: 1px solid #e0e0e0;
+}
+.clear_f{
+	overflow: hidden;
+}
+
+
+
